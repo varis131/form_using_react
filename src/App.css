@@ -1,38 +1,168 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 20px;
+  
+  
+}
+
+.form-container {
+  max-width: 420px;
+  margin: auto;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.form-container label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select {
+  width: 100%;
+  padding: 9px 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+.form-container .comments,
+.form-container div > input[type="checkbox"] + div {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.form-container input[type="checkbox"],
+.form-container input[type="radio"] {
+  margin-top: 4px;
+  cursor: pointer;
+}
+.form-container p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+fieldset {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+legend {
+  padding: 0 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+fieldset input[type="radio"] {
+  margin-right: 6px;
+}
+button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #2563eb;
   color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #1e40af;
+}
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.checkbox-item input {
+  margin-top: 4px;
+}
+
+.checkbox-content label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.checkbox-content p {
+  margin-top: 0px;
+  font-size: 13px;
+  color: #6b7280;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.form-container {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+}
+.form-container input:hover,
+.form-container select:hover {
+  border-color: #93c5fd;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.checkbox-item {
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.checkbox-item:hover {
+  background-color: #f9fafb;
+}
+fieldset {
+  background-color: #f9fafb;
+}
+
+fieldset label {
+  font-weight: 500;
+}
+button {
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+@media (max-width: 480px) {
+  .form-container {
+    margin: 0 12px;
+    padding: 20px;
   }
 }
+
+
+
+
+

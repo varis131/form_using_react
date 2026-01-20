@@ -25,16 +25,15 @@ function App() {
     }));
   }
 
-  function submitHandler(event){
+  function submitHandler(event) {
     event.preventDefault();
-    console.log("printing form data")
+    console.log("printing form data");
     console.log(formData);
-    
   }
 
   return (
     <div className="App">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="form-container">
         {/*first name*/}
         <label htmlFor="firstName">Enter your firstName</label>
         <br />
@@ -146,52 +145,54 @@ function App() {
         <label>By Email</label>
         <br />
 
-        {/*comments*/}
-        <div className="comments">
+        {/* comments */}
+        <div className="checkbox-item">
           <input
             type="checkbox"
-            name="comments"
             id="comments"
+            name="comments"
             checked={formData.comments}
             onChange={changeHandler}
           />
-          <div>
-            <label htmlFor="comments">comments</label>
-            <p>get notified when someone comments</p>
+
+          <div className="checkbox-content">
+            <label htmlFor="comments">Comments</label>
+            <p>Get notified when someone comments</p>
           </div>
         </div>
-        <br />
 
-        {/*offers*/}
-        <div>
+        {/* offers */}
+        <div className="checkbox-item">
           <input
             type="checkbox"
-            name="offers"
             id="offers"
+            name="offers"
             checked={formData.offers}
             onChange={changeHandler}
           />
-          <div>
-            <label htmlFor="offers">offers</label>
-            <p>get notified when offers are available</p>
+
+          <div className="checkbox-content">
+            <label htmlFor="offers">Offers</label>
+            <p>Get notified when offers are available</p>
           </div>
         </div>
-        <br />
 
-        {/*candidate*/}
-        <div>
+        {/* candidates */}
+        <div className="checkbox-item">
           <input
             type="checkbox"
             id="candidates"
             name="candidates"
-            checked={formData.candidate}
+            checked={formData.candidates}
             onChange={changeHandler}
           />
-          <div>
-            <label htmlFor="candidates">candidates</label>
-            <p>get notified when a candidate applies for a job</p>
+
+          <div className="checkbox-content">
+            <label htmlFor="candidates">Candidates</label>
+            <p>Get notified when a candidate applies for a job</p>
           </div>
         </div>
+
         <br />
 
         <fieldset>
@@ -199,31 +200,31 @@ function App() {
           <p>These are delivered via SMS to your phone</p>
 
           <input
-          type="radio"
-          id="pushEverything"
-          name="pushNotification"
-          value="Everything"
-          onChange={changeHandler}
+            type="radio"
+            id="pushEverything"
+            name="pushNotification"
+            value="Everything"
+            onChange={changeHandler}
           />
           <label htmlFor="pushEverything">Everything</label>
-          <br/>
+          <br />
 
           <input
-          type="radio"
-          id="pushEmail"
-          name="pushNotification"
-          value="Same as email"
-          onChange={changeHandler}
+            type="radio"
+            id="pushEmail"
+            name="pushNotification"
+            value="Same as email"
+            onChange={changeHandler}
           />
           <label htmlFor="pushEmail">Same as email</label>
-          <br/>
+          <br />
 
           <input
-          type="radio"
-          id="pushNothing"
-          name="pushNotification"
-          value="No push notification"
-          onChange={changeHandler}
+            type="radio"
+            id="pushNothing"
+            name="pushNotification"
+            value="No push notification"
+            onChange={changeHandler}
           />
           <label htmlFor="pushNothing">No push notification</label>
         </fieldset>
